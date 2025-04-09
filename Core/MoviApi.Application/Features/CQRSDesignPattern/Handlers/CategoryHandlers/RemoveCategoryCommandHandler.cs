@@ -17,10 +17,10 @@ namespace MoviApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandle
             _context = context;
         }
 
-        public async void Handle(RemoveCategoryCommand command)
+        public async Task Handler(RemoveCategoryCommand command)
         {
-            var value = await _context.Movies.FindAsync(command.CategoryId);
-            _context.Movies.Remove(value);
+            var value = await _context.Categories.FindAsync(command.CategoryId);
+            _context.Categories.Remove(value);
             await _context.SaveChangesAsync();
         }
     }

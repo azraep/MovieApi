@@ -14,7 +14,7 @@ namespace MovieApi.Persistence.Context
         {
             optionsBuilder.UseSqlServer("Server= DESKTOP-11AMGS3\\SQLEXPRESS;initial Catalog=01_ApiMovieDb;integrated security=True;TrustServerCertificate=True");
         }
-        #region Tabloları Hazırlama
+        #region -- Tabloları Hazırlama
         // public DbSet < C# tablo adı > Sql Tablo Adı { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Movie> Movies { get; set; }

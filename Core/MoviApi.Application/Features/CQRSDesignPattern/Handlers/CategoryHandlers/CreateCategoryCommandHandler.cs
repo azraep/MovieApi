@@ -12,13 +12,14 @@ namespace MoviApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandle
     public class CreateCategoryCommandHandler
     {
         private readonly MovieContext _context;
+        // ctrl + .(Nokta)  _context i hazırlıyor.
 
         public CreateCategoryCommandHandler(MovieContext context)
         {
             _context = context;
         }
 
-        public async void Handle(CreateCategoryCommand command)
+        public async Task Handler(CreateCategoryCommand command)
         {
             _context.Categories.Add(new Category
             {
